@@ -42,8 +42,7 @@ body {
 }
 .card-container .box-1 .gradient-card {
   position: relative;
-  width: 75%;
-  margin-right: -25rem;
+  margin-right: -20rem;
   z-index: 100;
   background: url(../../dist/images/bg-card-front.png) no-repeat center center/cover;
   border-radius: 10px;
@@ -81,7 +80,7 @@ body {
   text-transform: uppercase;
 }
 .card-container .box-1 .monochrome-card {
-  margin-right: -40rem;
+  margin-right: -30rem;
   position: relative;
   z-index: 10;
   width: 80%;
