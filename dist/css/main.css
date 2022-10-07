@@ -136,7 +136,7 @@ body {
 .card-container .box-2 p {
   margin-bottom: 0.5rem;
   color: hsl(278deg, 68%, 11%);
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-transform: uppercase;
 }
 .card-container .box-2 input {
