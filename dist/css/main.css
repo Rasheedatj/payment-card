@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 60.25%;
+}
+
+body {
+  height: 100vh;
+  font-family: "Roboto";
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.card-container {
+  display: flex;
+  width: 100%;
+}
+@media (max-width: 375px) {
+  .card-container {
+    flex-direction: column;
+  }
+}
+
+.card-container .box-1 {
+  height: 100vh;
+  flex: 2;
+  background: url(../../dist/images/bg-main-desktop.png) no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+@media (max-width: 375px) {
+  .card-container .box-1 {
+    flex-direction: column-reverse;
+    padding: 3rem 1.5rem;
+    background: url(../../dist/images/bg-main-mobile.png) no-repeat center center/cover;
+  }
+}
+.card-container .box-1 .gradient-card {
+  position: relative;
+  width: 75%;
+  margin-right: -25rem;
+  z-index: 100;
+  background: url(../../dist/images/bg-card-front.png) no-repeat center center/cover;
+  border-radius: 10px;
+  padding: 2rem;
+}
+@media (max-width: 375px) {
+  .card-container .box-1 .gradient-card {
+    margin-right: 0;
+    width: 90%;
+    height: 28vh;
+    padding: 1.5rem;
+    align-self: flex-start;
+    margin-bottom: -10rem;
+  }
+}
+.card-container .box-1 .gradient-card .card-number {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 3.5rem;
+  margin-top: 5rem;
+  word-spacing: 2rem;
+  margin-bottom: 3rem;
+}
+@media (max-width: 375px) {
+  .card-container .box-1 .gradient-card .card-number {
+    font-size: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
+}
+.card-container .box-1 .gradient-card .owner-info {
+  display: flex;
+  justify-content: space-between;
+  color: hsl(0deg, 0%, 100%);
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+.card-container .box-1 .monochrome-card {
+  margin-right: -40rem;
+  position: relative;
+  z-index: 10;
+  width: 80%;
+}
+@media (max-width: 375px) {
+  .card-container .box-1 .monochrome-card img {
+    width: 100%;
+    height: 25vh;
+  }
+}
+@media (max-width: 375px) {
+  .card-container .box-1 .monochrome-card {
+    margin-right: 0;
+    align-self: flex-end;
+    margin-bottom: -10rem;
+  }
+}
+.card-container .box-1 .monochrome-card::after {
+  content: "000";
+  position: absolute;
+  color: white;
+  font-size: 2rem;
+  top: 45%;
+  right: 12%;
+}
+@media (max-width: 375px) {
+  .card-container .box-1 .monochrome-card::after {
+    right: 15%;
+    top: 40%;
+  }
+}
+
+.card-container .box-2 {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 15rem;
+  padding-bottom: 5rem;
+}
+.card-container .box-2 form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 50%;
+}
+@media (max-width: 375px) {
+  .card-container .box-2 form {
+    width: 90%;
+  }
+}
+.card-container .box-2 p {
+  margin-bottom: 0.5rem;
+  color: hsl(278deg, 68%, 11%);
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.card-container .box-2 input {
+  border: 1.5px solid hsl(270deg, 3%, 87%);
+  padding: 1rem;
+  width: 100%;
+  border-radius: 5px;
+  outline: none;
+  font-size: 2rem;
+}
+.card-container .box-2 input:focus {
+  border: 2px solid hsl(279deg, 6%, 55%);
+}
+.card-container .box-2 .dates {
+  display: flex;
+}
+.card-container .box-2 .month-year {
+  width: 25%;
+  text-align: center;
+}
+.card-container .box-2 .year {
+  margin-left: 2rem;
+}
+.card-container .box-2 button {
+  background-color: hsl(278deg, 68%, 11%);
+  border-radius: 5px;
+  padding: 1rem;
+  color: hsl(0deg, 0%, 100%);
+  font-size: 2rem;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.modal-container {
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: hsl(0deg, 0%, 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.modal-container .modal-content {
+  text-align: center;
+  width: 60%;
+}
+@media (max-width: 375px) {
+  .modal-container .modal-content {
+    width: 70%;
+  }
+}
+.modal-container .modal-content h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding-top: 2rem;
+}
+.modal-container .modal-content p {
+  font-size: 1.8rem;
+  text-transform: none;
+  color: hsl(279deg, 6%, 55%);
+  padding-bottom: 3rem;
+  padding-top: 2rem;
+}
+.modal-container .modal-content button {
+  width: 70%;
+}
+@media (max-width: 375px) {
+  .modal-container .modal-content button {
+    width: 100%;
+  }
+}
+.modal-container .modal-content a {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 100%);
+  font-size: 2rem;
+}
+
+.invalid .card-error-message {
+  color: red;
+  font-size: 16px;
+}
+
+.MMinvalid .date-error-message {
+  color: red;
+  font-size: 16px;
+  display: block;
+}
+
+.cvcinvalid .cvc-error-message {
+  color: red;
+  font-size: 16px;
+  display: block;
+}/*# sourceMappingURL=main.css.map */
