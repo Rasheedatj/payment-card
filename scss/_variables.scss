@@ -3,17 +3,17 @@ $LightGrayishViolet: hsl(270, 3%, 87%);
 $DarkGrayishViolet: hsl(279, 6%, 55%);
 $VeryDarkViolet: hsl(278, 68%, 11%);
 $box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.1);
-$mobile:375px;
+$mobile: 420px;
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-size: 60.25%;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 60.25%;
 }
 
 @mixin mobile {
-    @media (max-width:$mobile) {
-        @content
-    }  
+  @media (max-width: $mobile) {
+    @content;
+  }
 }

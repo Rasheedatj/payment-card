@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -8,7 +8,7 @@
 
 body {
   height: 100vh;
-  font-family: "Roboto";
+  font-family: "Space Grotesk";
   font-weight: 500;
   line-height: 1.5;
 }
@@ -17,7 +17,7 @@ body {
   display: flex;
   width: 100%;
 }
-@media (max-width: 375px) {
+@media (max-width: 420px) {
   .card-container {
     flex-direction: column;
   }
@@ -33,7 +33,7 @@ body {
   justify-content: center;
   gap: 4rem;
 }
-@media (max-width: 375px) {
+@media (max-width: 420px) {
   .card-container .box-1 {
     flex-direction: column-reverse;
     padding: 3rem 1.5rem;
@@ -42,74 +42,81 @@ body {
 }
 .card-container .box-1 .gradient-card {
   position: relative;
-  margin-right: -20rem;
+  margin-right: -35rem;
   z-index: 100;
-  background: url(../../dist/images/bg-card-front.png) no-repeat center center/cover;
-  border-radius: 10px;
-  padding: 2rem;
 }
-@media (max-width: 375px) {
+@media (max-width: 420px) {
   .card-container .box-1 .gradient-card {
     margin-right: 0;
     width: 90%;
-    height: 28vh;
-    padding: 1.5rem;
     align-self: flex-start;
     margin-bottom: -10rem;
   }
 }
+.card-container .box-1 .gradient-card .img {
+  width: 100%;
+}
+@media (max-width: 420px) {
+  .card-container .box-1 .gradient-card .img {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+.card-container .box-1 .gradient-card .card-info {
+  position: absolute;
+  inset: 2rem;
+}
 .card-container .box-1 .gradient-card .card-number {
-  color: hsl(0deg, 0%, 100%);
-  font-size: 3.5rem;
+  color: hsl(0, 0%, 100%);
+  font-size: 3.2rem;
   margin-top: 5rem;
   word-spacing: 2rem;
   margin-bottom: 3rem;
 }
-@media (max-width: 375px) {
+@media (max-width: 420px) {
   .card-container .box-1 .gradient-card .card-number {
     font-size: 2rem;
-    margin-top: 4rem;
-    margin-bottom: 2rem;
+    margin-top: 2.8rem;
+    margin-bottom: 1rem;
   }
 }
 .card-container .box-1 .gradient-card .owner-info {
   display: flex;
   justify-content: space-between;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   font-size: 3rem;
   text-transform: uppercase;
 }
+.card-container .box-1 .gradient-card .date span {
+  font-size: 1em;
+}
 .card-container .box-1 .monochrome-card {
-  margin-right: -30rem;
+  width: 80%;
+  margin-right: -48rem;
   position: relative;
   z-index: 10;
-  width: 80%;
 }
-@media (max-width: 375px) {
+.card-container .box-1 .monochrome-card img {
+  width: 100%;
+}
+@media (max-width: 420px) {
   .card-container .box-1 .monochrome-card img {
     width: 100%;
-    height: 25vh;
   }
 }
-@media (max-width: 375px) {
+.card-container .box-1 .monochrome-card p {
+  color: hsl(0, 0%, 100%);
+  position: absolute;
+  top: 42%;
+  right: 10%;
+  font-size: 18px;
+}
+@media (max-width: 420px) {
   .card-container .box-1 .monochrome-card {
-    margin-right: 0;
+    margin-right: 0rem;
     align-self: flex-end;
     margin-bottom: -10rem;
-  }
-}
-.card-container .box-1 .monochrome-card::after {
-  content: "000";
-  position: absolute;
-  color: white;
-  font-size: 2rem;
-  top: 45%;
-  right: 12%;
-}
-@media (max-width: 375px) {
-  .card-container .box-1 .monochrome-card::after {
-    right: 15%;
-    top: 40%;
+    width: 85%;
   }
 }
 
@@ -128,27 +135,30 @@ body {
   gap: 3rem;
   width: 50%;
 }
-@media (max-width: 375px) {
+@media (max-width: 420px) {
   .card-container .box-2 form {
     width: 90%;
   }
 }
 .card-container .box-2 p {
   margin-bottom: 0.5rem;
-  color: hsl(278deg, 68%, 11%);
+  color: hsl(278, 68%, 11%);
   font-size: 1.8rem;
   text-transform: uppercase;
 }
 .card-container .box-2 input {
-  border: 1.5px solid hsl(270deg, 3%, 87%);
+  border: 1.5px solid hsl(270, 3%, 87%);
   padding: 1rem;
   width: 100%;
   border-radius: 5px;
   outline: none;
   font-size: 2rem;
 }
+.card-container .box-2 #name {
+  text-transform: capitalize;
+}
 .card-container .box-2 input:focus {
-  border: 2px solid hsl(279deg, 6%, 55%);
+  border: 2px solid hsl(279, 6%, 55%);
 }
 .card-container .box-2 .dates {
   display: flex;
@@ -161,10 +171,10 @@ body {
   margin-left: 2rem;
 }
 .card-container .box-2 button {
-  background-color: hsl(278deg, 68%, 11%);
+  background-color: hsl(278, 68%, 11%);
   border-radius: 5px;
   padding: 1rem;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   font-size: 2rem;
   text-transform: capitalize;
   cursor: pointer;
@@ -176,7 +186,7 @@ body {
   top: 0;
   left: 0;
   position: absolute;
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0, 0%, 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -186,7 +196,7 @@ body {
   text-align: center;
   width: 60%;
 }
-@media (max-width: 375px) {
+@media (max-width: 420px) {
   .modal-container .modal-content {
     width: 70%;
   }
@@ -199,21 +209,21 @@ body {
 .modal-container .modal-content p {
   font-size: 1.8rem;
   text-transform: none;
-  color: hsl(279deg, 6%, 55%);
+  color: hsl(279, 6%, 55%);
   padding-bottom: 3rem;
   padding-top: 2rem;
 }
 .modal-container .modal-content button {
   width: 70%;
 }
-@media (max-width: 375px) {
+@media (max-width: 420px) {
   .modal-container .modal-content button {
     width: 100%;
   }
 }
 .modal-container .modal-content a {
   text-decoration: none;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   font-size: 2rem;
 }
 

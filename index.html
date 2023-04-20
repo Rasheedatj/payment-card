@@ -1,81 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- favicon -->
-    <link rel="shortcut icon" href="./dist/images/favicon-32x32.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./dist/images/favicon-32x32.png"
+      type="image/x-icon"
+    />
     <!-- stylesheet link -->
-    <link rel="stylesheet" href="./dist/css/main.css">
+    <link rel="stylesheet" href="./dist/css/main.css" />
     <title>Card payment</title>
-</head>
-<body>
+  </head>
+  <body>
     <section class="card-container">
-        <div class="box-1">
-           <div class="gradient-card">
-                <img src="./dist/images/card-logo.svg" alt="card logo">
-                <p class="card-number">0000 0000 0000 0000</p>
-                <div class="owner-info">
-                <p class ="name">jane appleseed</p>
-                <p class ="date">00/00</p>
-                </div>  
-           </div>
+      <!-- CARD BOX -->
+      <div class="box-1">
+        <!-- ##### GRADIENT CARD ###### -->
+        <div class="gradient-card">
+          <img src="./dist/images/bg-card-front.png" alt="" class="img" />
 
-           <div class="monochrome-card">
-                <img src="./dist/images/bg-card-back.png" alt="card back">
-           </div>
-        </div>
-
-        <div class="box-2">
-            <form action="" method="get" enctype="multipart/form-data">
-               <div class="name">
-                <p>cardholder name</p>
-                 <label for="Name">
-                    <input type="text" placeholder="e.g Jane Appleseed">
-                </label>
-               </div>
-
-                <div class="card-number">
-                    <p>card number</p>
-                    <label for="card number">
-                        <input type="tel" placeholder="e.g 1234 5678 9123 0000" id="card-input"
-                        onkeydown="validation()">
-                        <span class="card-error-message"></span>
-                    </label>
-                </div>
-
-                <div class="dates">
-                    <label for="expiry-date">
-                        <p>exp.date(mm/yy)</p>
-                        <input type="tel" placeholder="MM" class="month-year" id="date-input" onkeydown="dateVaidation()">
-                        <input type="tel" placeholder="YY" class="month-year year" id="year-input" onkeydown="yearVaidation()">
-                        <span class="date-error-message"></span>
-                    </label>
-
-                    <label for="cvc">
-                       <p> cvc</p>
-                        <input type="tel" placeholder="e.g 123" id="cvc-input" onkeydown="cvcValidation()"  >
-                        <span class="cvc-error-message"></span>
-                    </label>
-                </div>
-
-                <button type="submit" class="btn">confirm</button>
-
-            </form>
-
-            <div class="modal-container">
-                <div class="modal-content">
-                    <img src="./dist/images/icon-complete.svg" alt="complete">
-                    <h2>thank you!</h2>
-                    <p>We've added your card details</p>
-                    <button type="submit" class="closeModal"><a href="">continue</a></button>
-                </div>
+          <div class="card-info">
+            <img src="./dist/images/card-logo.svg" alt="card logo" />
+            <p class="card-number">0000 0000 0000 0000</p>
+            <div class="owner-info">
+              <p class="name">jane appleseed</p>
+              <p class="date">
+                <span class="month">00</span>/ <span class="year">00</span>
+              </p>
             </div>
+          </div>
         </div>
+
+        <!-- ##### MONO CARD ## -->
+        <div class="monochrome-card">
+          <img src="./dist/images/bg-card-back.png" alt="card back" />
+          <p id="cvc">000</p>
+        </div>
+      </div>
+
+      <!-- INPUT BOX -->
+      <div class="box-2">
+        <form action="" method="get" enctype="multipart/form-data">
+          <!-- NAME -->
+          <div class="name">
+            <p>cardholder name</p>
+            <label for="Name">
+              <input type="text" placeholder="e.g Jane Appleseed" id="name" />
+              <!-- <span class="name-error-message"></span> -->
+            </label>
+          </div>
+
+          <!-- CARD NUMBER -->
+          <div class="card-number">
+            <p>card number</p>
+            <label for="card number">
+              <input
+                type="tel"
+                placeholder="e.g 1234 5678 9123 0000"
+                id="card-number"
+              />
+              <span class="card-error-message"></span>
+            </label>
+          </div>
+
+          <!-- DATES & CVC -->
+          <div class="dates">
+            <!-- date -->
+            <label for="expiry-date">
+              <p>exp.date(mm/yy)</p>
+              <input
+                type="tel"
+                placeholder="MM"
+                class="month-year"
+                id="month"
+              />
+              <input
+                type="tel"
+                placeholder="YY"
+                class="month-year year"
+                id="year"
+              />
+              <!-- <span class="date-error-message"></span> -->
+            </label>
+
+            <!-- cvc -->
+            <label for="cvc">
+              <p>cvc</p>
+              <input type="tel" placeholder="e.g 123" id="cvc-input" />
+              <span class="cvc-error-message"></span>
+            </label>
+          </div>
+
+          <!-- <p class="btn">confirm</p> -->
+          <button type="submit" class="btn">confirm</button>
+        </form>
+
+        <!-- THANK YOU MODAL -->
+        <div class="modal-container">
+          <div class="modal-content">
+            <img src="./dist/images/icon-complete.svg" alt="complete" />
+            <h2>thank you!</h2>
+            <p>We've added your card details</p>
+            <button type="submit" class="closeModal">
+              <a href="">continue</a>
+            </button>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- javaScript link -->
     <script src="./dist/app.js"></script>
-</body>
+  </body>
 </html>
