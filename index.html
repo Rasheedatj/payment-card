@@ -76,12 +76,14 @@
                 placeholder="MM"
                 class="month-year"
                 id="month"
+                maxlength="2"
               />
               <input
                 type="tel"
                 placeholder="YY"
                 class="month-year year"
                 id="year"
+                maxlength="2"
               />
               <!-- <span class="date-error-message"></span> -->
             </label>
@@ -89,7 +91,12 @@
             <!-- cvc -->
             <label for="cvc">
               <p>cvc</p>
-              <input type="tel" placeholder="e.g 123" id="cvc-input" />
+              <input
+                type="tel"
+                placeholder="e.g 123"
+                id="cvc-input"
+                maxlength="3"
+              />
               <span class="cvc-error-message"></span>
             </label>
           </div>

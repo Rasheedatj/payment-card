@@ -7,8 +7,9 @@ openBtn.addEventListener('click', (e) => {
   modal.style.display = 'flex';
 });
 
-closeBtn.addEventListener('click', function (e) {
+closeBtn.addEventListener('click', function () {
   modal.style.display = 'none';
+  console.log('close');
 });
 
 // Changing card numbers
